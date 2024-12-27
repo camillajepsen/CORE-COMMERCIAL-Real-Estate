@@ -1,0 +1,914 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    color: white;
+    padding: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 100%;
+    z-index: 1; 
+    position: relative; 
+}
+
+/* Navigation bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(6, 115, 231);
+}
+
+nav h1 {
+    padding-bottom: 15px;
+    padding-top: 19px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Centered links in the navbar */
+.centered-links {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.right-hand-links {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#greeting {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); 
+    white-space: nowrap;
+}
+
+/* Align greeting to the right */
+.nav-right {
+    position: absolute;
+    right: 20px;
+}
+
+.nav-left h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.nav-left h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-left h1 a:visited {
+    color: #fff;
+}
+
+/* second lvl navigation bar */
+.nav-links {
+    background-color: rgba(191, 218, 233, 0.9);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Flexbox styling for the black navbar */
+.nav-bar-container {
+    display: flex;
+    justify-content: center; /* Center the h1 */
+    align-items: center;
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+}
+
+
+/* Container settings */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 100vh;
+}
+
+/* Video element */
+#index_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+    z-index: -1; 
+    background-color: black; 
+}
+
+#front-page-search{
+    width: 400px;
+    height: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#front-page-search-button{
+    width: 160px;
+    height: 45px;
+    color: rgb(222, 241, 245);
+    background-color: black;
+    border-radius: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Main content area */
+
+.main-content {
+    flex-grow: 1; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews {
+    width: 100%;
+    height: 35%;
+    background-color: rgb(211, 239, 246, 0.7); 
+    z-index: 1;
+    margin-top: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.review-header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#review-logo{
+    height: 30px;
+    width: 30px;
+}
+
+.horizontal-review-grid{
+    display: flex;
+    justify-content: space-evenly;
+    height: 75%;
+    width: 100%;
+}
+
+.review-box{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color:#fff;
+    padding: 10px;
+}
+
+.submit-button{
+    background-color: #000000;
+    height: 50px;
+    width: 160px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.submit-button:hover{
+    background-color: #d3eff6;
+    height: 50px;
+    width: 160px;
+    border-radius: 20px;
+    color: #000000;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(24, 24, 24, 0.97); 
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*about page styles*/
+
+.info {
+    background-image: url('../images/about-background.jpg');
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Info container grows to fill available space */
+.info-container {
+    flex: 1; 
+    display: flex;
+    height: 86%;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden; 
+}
+
+.inner-info {
+    background-color: rgba(42, 44, 48, 0.96);
+    width: 70%;
+    padding: 10%;
+    color: white;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+/* contact page styles */
+
+#contact-form input{
+    width: 300px;
+    height: 30px;
+}
+
+#contact-form textarea{
+    width: 300px;
+    height: 50px;
+}
+
+/* register/login page */
+
+.register-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/sign-up-back.jpg');
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 86%;
+    width: 65%;
+    justify-content: space-evenly;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#reset-link{
+    color: #fff;
+}
+
+#reset-link a:visited{
+    color: #fff;
+}
+
+#formh2{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.register-form input{
+    height: 35px;
+    width: 200px;
+}
+
+.register-form select{
+    height: 35px;
+    width: 200px;
+}
+
+.register-form button{
+    height: 35px;
+    width: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Admin dashboard */
+
+.admin-dashboard {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(179, 210, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-overview {
+    display: flex;
+    height: 86%;
+    width: 95%;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden; 
+}
+
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    background-color: rgb(0, 0, 0);
+}
+
+.admin-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d3eff6;
+    background-color: black;
+    color: white;
+    height: 30%;
+    width: 100%;
+    transform: 0.3s ease;
+}
+
+.admin-button:hover {
+    transform: scale(1.05);
+}
+
+.admin-button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-button a:hover {
+    color: #d3eff6;
+}
+
+.admin-button a:visited {
+    color: white;
+}
+
+.admin-stats {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.admin-title {
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    width: 100%;
+    height: 10%;
+    border: 1px solid #d3eff6;
+    background-color: black;
+    color: white;
+}
+
+
+.admin-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    height: calc(100% - 11.4%); 
+    overflow-y: scroll; 
+}
+
+/* Admin locations/cities/countries/states*/
+
+.places-manage-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+    height: calc(100% - 11.4%); 
+    overflow-y: scroll; 
+}
+
+.places-manage-content input, select {
+    height: 40px;
+    width: 200px;
+    padding: 2px;
+}
+
+.places-manage-content h2 {
+    border-bottom: 1px solid black;
+}
+
+.location-button {
+    width: 100px;
+    height: 30px;
+    background-color: #000;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.location-button:hover {
+    background-color: #b9d3ef; 
+    color: #000;
+}
+
+/* flexbox container for the place-card */
+.place-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.button-group {
+    display: flex; 
+    gap: 10px; 
+    padding-bottom: 10px;
+}
+
+.update-form, .delete-form {
+    display: flex; 
+    align-items: center; 
+}
+
+
+/* Admin update content */
+
+.admin-update-button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.content-box{
+    height: 100%;
+    width: 600px;
+}
+
+
+.admin-manage-content {
+    padding-left: 10%;
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Admin manage agents/owners/customers   */
+
+.object-list {
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+.object-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.object-card img.object-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.object-card h3 {
+    margin-bottom: 10px;
+}
+
+.object-card p {
+    margin: 5px 0;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* Admin property */
+.property-card {
+    width: 30%; 
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 300px; 
+}
+
+.property-card img {
+    width: 100%;
+    height: auto;
+}
+
+.admin-property {
+    display: flex;
+    border-top: 1px solid #d3eff6;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    height: 100%; 
+    overflow-y: scroll; 
+}
+
+.admin-property > .property-card {
+    flex-grow: 1; 
+    max-width: 100%;
+}
+
+
+/* Owner Dashboard */
+
+.owner-dash-topbox {
+    width: 100%;
+    height: 11.4%;
+}
+
+.owner-title{
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    width: 100%;
+    height: 11.4%;
+    border: 1px solid #d3eff6;
+    background-color: black;
+    color: white;
+}
+
+/* Add property */
+.add-property-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.add-property-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.add-property-form label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.add-property-form input[type="text"],
+.add-property-form input[type="number"],
+.add-property-form select,
+.add-property-form input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+}
+
+.add-property-form button.location-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    width: 200px;
+    border-radius: 4px;
+    margin-top: 5px;
+    height: 40px;
+    align-self: flex-end;
+}
+
+.add-property-form button.location-button:hover {
+    background-color: #b9d3ef;
+    color: #000;
+}
+
+.add-property-form p {
+    text-align: center;
+    color: #666;
+    margin-top: 15px;
+}
+
+
+
+/* see enquiries*/
+
+.enquiry-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-height: 460px; 
+    overflow-y: auto; 
+}
+
+.enquiry-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.enquiry-card h3 {
+    margin-bottom: 10px;
+}
+
+.enquiry-card p {
+    margin: 5px 0;
+}
+
+.enquiry-button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.enquiry-button:hover {
+    background-color: #b9d3ef;
+    color: black;
+}
+
+
+
+/*  content for properties layout */
+
+.stat-data {
+    width: 20%;
+    background-color: #fff; 
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-data img {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Manage reviews for admin */
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.review-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-review-button{
+    background-color: #000;
+    color: #fff;
+    width: 60px;
+    height: 20px;
+}
+
+.admin-review-button:hover{
+    background-color:#b9d3ef;
+    color: #000000;
+    width: 60px;
+    height: 20px;
+}
+
+/* Properties view for customers and non logged in users */
+
+.properties {
+    background-color: rgba(113, 140, 157, 0.522);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.properties-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.properties-inner-container{
+    padding-left: 4%;
+    color: rgb(0, 0, 0);
+}
+
+.property-card {
+    flex: 1 1 calc(100% - 20px); /* Two cards per row */
+    background-color:#ebf2fa;
+    overflow: hidden;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    max-width: calc(30% - 10px); /* Ensures all cards maintain the same width */
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.property-card img {
+    width: 100%; /* Ensures the image takes up the full card width */
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card .extra {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.property-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* styling for the property search form */
+.properties-form input,
+.properties-form select {
+    height: 35px;
+    width: 200px;
+}
+
+.property-search-button {
+    height: 35px;
+    width: 200px;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    border-radius: 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.property-search-button:hover {
+    background-color:#d3eff6;
+    color: #000000;
+}
+
+
+/* property deatils */
+
+
+
+.property-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    height: 68%;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.property-details-img{
+    width: 40%;
+    height: 100%;
+}
+
+.property-details-info{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details-button{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.details-button:hover{
+    background-color: #b9d3ef; 
+    color: #000;
+}
